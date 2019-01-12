@@ -47,7 +47,7 @@ FROM projects
 INNER JOIN pledges
 on projects.id = pledges.project
 GROUP BY projects.category
-HAVING projects.category = "music";
+HAVING projects.category == "music";
 "
 end
 
