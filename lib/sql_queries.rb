@@ -44,7 +44,7 @@ end
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
 "SELECT projects.category, pledges.amount
 FROM pledges
-INNER JOIN projects
+LEFT INNER JOIN projects
 ON pledges.user_id = projects.id
 GROUP BY pledges.amount
 HAVING projects.category == 'music';
